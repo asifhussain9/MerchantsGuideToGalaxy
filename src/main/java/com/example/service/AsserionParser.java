@@ -14,5 +14,5 @@ public abstract class AsserionParser{
         this.intergalacticMap = intergalacticMap;
     }
 
-    public abstract void parse(String assertion) throws InvalidInputException, InvalidAssertionException;
+    public abstract void parse(String assertion) throws InvalidAssertionException;
 }
