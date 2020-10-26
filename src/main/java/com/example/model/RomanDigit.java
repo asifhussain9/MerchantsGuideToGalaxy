@@ -22,7 +22,7 @@ public enum RomanDigit {
     public static final String REPEATABLE_C = "CCCC";
     public static final String REPEATABLE_M = "MMMM";
 
-    public static final Map<String, Double> subtractionPatternValueMap;
+    public static Map<String, Double> subtractionPatternValueMap;
     public static final String[] digitRepititionValidation = {NON_REPEATABLE_D, NON_REPEATABLE_L, NON_REPEATABLE_V, REPEATABLE_C, REPEATABLE_I, REPEATABLE_X, REPEATABLE_M};
 
     static {
@@ -36,13 +36,7 @@ public enum RomanDigit {
     }
 
     public static boolean isValidRepititions(String romanNumber) {
-        boolean isValid = true;
-
-        isValid = !Arrays.stream(digitRepititionValidation).anyMatch(
-                validationRule -> romanNumber.contains(validationRule)
-        );
-
-        return isValid;
+        return Arrays.stream(digitRepititionValidation).noneMatch(romanNumber::contains);
     }
 
     private final int value;

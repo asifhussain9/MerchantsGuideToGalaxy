@@ -9,7 +9,6 @@ import com.example.service.parser.QuestionParser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +19,7 @@ public class QuestionParserTest {
     private QuestionParser parser;
 
     @BeforeEach
-    public void initialise(){
+    public void initialise() {
         intergalacticMap = new HashMap<>();
         ornamentMap = new HashMap<>();
 
@@ -44,7 +43,7 @@ public class QuestionParserTest {
     }
 
     @Test
-    public void shouldThrowExceptionForInvalidQuestion() throws InvalidQuestionException {
+    public void shouldThrowExceptionForInvalidQuestion() {
         String questionStr = "how much wood could a woodchuck chuck if a woodchuck could chuck wood ?";
         parser = new IntergalacticQuestionParser(intergalacticMap);
 
@@ -64,7 +63,7 @@ public class QuestionParserTest {
     }
 
     @Test
-    public void shouldThrowExceptionForInvalidOrnamentQuestion(){
+    public void shouldThrowExceptionForInvalidOrnamentQuestion() {
         String questionStr = "how many Credits is glob prok prok ?";
         parser = new OrnamentQuestionParser(intergalacticMap, ornamentMap);
 

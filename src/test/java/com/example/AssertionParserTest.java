@@ -33,7 +33,7 @@ public class AssertionParserTest {
     }
 
     @Test
-    public void shouldThrowInvalidAssertionExceptionForIncorrectIntergalacticAssertion() throws InvalidAssertionException {
+    public void shouldThrowInvalidAssertionExceptionForIncorrectIntergalacticAssertion() {
         Assertions.assertThrows(InvalidAssertionException.class, ()->intergalacticParser.parse("glob is J"));
     }
 

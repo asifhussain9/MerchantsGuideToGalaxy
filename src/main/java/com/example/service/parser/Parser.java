@@ -28,7 +28,7 @@ public class Parser {
                         return digit1 == null ? w1 : digit1.name() +intergalacticMap.get(w2).name();
                     })
                     .orElse("");
-            return intergalacticNumber.isEmpty() ? true : RomanDigit.isValidRepititions(romanNumberStr);
+            return intergalacticNumber.isEmpty() || RomanDigit.isValidRepititions(romanNumberStr);
         }
 
         return false;
