@@ -1,17 +1,19 @@
-package com.example.service;
+package com.example.service.parser;
 
 import com.example.exception.InvalidAssertionException;
 import com.example.model.Question;
 import com.example.model.RomanDigit;
+import com.example.service.Calculator;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.IntStream;
 
-public class OrnamentParser extends AsserionParser {
+public class OrnamentAssertionParser extends AssertionParser {
     private Map<String, Double> ornamentValueMap;
 
-    public OrnamentParser(Map<String, RomanDigit> intergalacticMap, Map<String, Double> ornamentValueMap) {
+    public OrnamentAssertionParser(Map<String, RomanDigit> intergalacticMap, Map<String, Double> ornamentValueMap) {
         super(intergalacticMap);
 
         this.ornamentValueMap = ornamentValueMap;
@@ -29,18 +31,16 @@ public class OrnamentParser extends AsserionParser {
                 String ornamentName = ornamentStrLHS[ornamentStrLHS.length - 1];
                 List<String> intergalacticNumber = new ArrayList();
 
-                for (int i = 0; i < ornamentStrLHS.length - 1; i++) {
-                    try {
-                        intergalacticNumber.add(ornamentStrLHS[i]);
-                    } catch (IllegalArgumentException e) {
-                        throw new InvalidAssertionException(e);
-                    }
+                IntStream.range(0, ornamentStrLHS.length - 1).forEach(i -> intergalacticNumber.add(ornamentStrLHS[i]));
+
+                if (isValidRomanNumber(intergalacticNumber)) {
+                    double intergalacticValue = intergalacticNumber.isEmpty() ? 1 : new Calculator(intergalacticMap, ornamentValueMap)
+                            .calculate(new Question(intergalacticNumber, ""));
+                    double ornamentValue = intergalacticValue == 0 ? value : value / intergalacticValue;
+                    ornamentValueMap.put(ornamentName, ornamentValue);
+                } else {
+                    throw new InvalidAssertionException();
                 }
-
-                double intergalacticValue = intergalacticNumber.isEmpty() ? 1 : new Calculator().calculate(new Question(intergalacticNumber, null));
-                double ornamentValue = intergalacticValue == 0 ? value : value / intergalacticValue;
-
-                ornamentValueMap.put(ornamentName, ornamentValue);
             } catch (NumberFormatException e) {
                 throw new InvalidAssertionException(e);
             }

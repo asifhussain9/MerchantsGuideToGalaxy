@@ -1,15 +1,11 @@
-package com.example;
+package com.example.service.parser;
 
 import com.example.exception.InvalidAssertionException;
-import com.example.exception.InvalidInputException;
 import com.example.model.RomanDigit;
-import com.example.service.AsserionParser;
-import com.example.service.Parser;
-import org.omg.CORBA.DynAnyPackage.Invalid;
 
 import java.util.Map;
 
-public class InterGalacticAssertionParser extends AsserionParser {
+public class InterGalacticAssertionParser extends AssertionParser {
     public InterGalacticAssertionParser(Map<String, RomanDigit> intergalacticMap) {
         super(intergalacticMap);
     }
