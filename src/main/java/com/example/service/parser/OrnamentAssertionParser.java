@@ -20,7 +20,6 @@ public class OrnamentAssertionParser extends AssertionParser {
     }
 
     public void parse(String assertion) throws InvalidAssertionException {
-        boolean isCreditStr = assertion.endsWith(Parser.CREDITS);
         assertion = assertion.replace(Parser.CREDITS, "");
         String[] ornamentStr = assertion.split(Parser.IS);
 

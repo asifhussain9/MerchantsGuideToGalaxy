@@ -1,17 +1,23 @@
 package com.example;
 
+import com.example.controller.QuestionController;
+import com.example.controller.TranslatorController;
 import com.example.exception.InvalidQuestionException;
 import com.example.model.Question;
 import com.example.model.RomanDigit;
 import com.example.service.parser.IntergalacticQuestionParser;
 import com.example.service.parser.OrnamentQuestionParser;
 import com.example.service.parser.QuestionParser;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 public class QuestionParserTest {
     private Map<String, RomanDigit> intergalacticMap;

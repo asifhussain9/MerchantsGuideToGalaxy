@@ -1,6 +1,6 @@
 package com.example.exception;
 
-public class InvalidAssertionException extends Throwable {
+public class InvalidAssertionException extends Exception {
     public InvalidAssertionException() {
         super();
     }
