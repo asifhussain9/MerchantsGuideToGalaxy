@@ -8,6 +8,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * This class parses questions in intergalactic and create a Question object
+ *
+ * @author Asif Hussain
+ * @version 1.0
+ *
+ */
 public class IntergalacticQuestionParser extends QuestionParser {
     public static final String HOW_MUCH_IS_ = "how much is ";
 

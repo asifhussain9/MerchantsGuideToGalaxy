@@ -9,6 +9,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * This class parses questions related to ornaments to create a Question object
+ *
+ * @author Asif Hussain
+ * @version 1.0
+ *
+ */
 public class OrnamentQuestionParser extends QuestionParser {
     public static final String HOW_MANY_CREDITS_IS_ = "how many Credits is ";
 

@@ -7,6 +7,14 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
+/**
+ * Please use the inputs.txt file to give inputs to the file
+ * This is the main class that reads input from inputs.txt and prints output to console
+ *
+ * @author Asif Hussain
+ * @version 1.0
+ *
+ */
 public class TranslatorMain {
     public static void main(String[] args) {
         if (!Files.exists(Paths.get("inputs.txt"))) {

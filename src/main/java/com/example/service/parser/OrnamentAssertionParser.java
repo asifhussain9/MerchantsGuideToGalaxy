@@ -10,6 +10,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.IntStream;
 
+/**
+ * This class parses input with ornament value assertions
+ *
+ * @author Asif Hussain
+ * @version 1.0
+ *
+ */
 public class OrnamentAssertionParser extends AssertionParser {
     private Map<String, Double> ornamentValueMap;
 

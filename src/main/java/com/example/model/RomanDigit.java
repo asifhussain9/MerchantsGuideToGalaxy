@@ -5,6 +5,14 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+
+/**
+ * This enum represents a digit in the roman numeral
+ *
+ * @author Asif Hussain
+ * @version 1.0
+ * 
+ */
 public enum RomanDigit {
     I(1),
     V(5),
@@ -56,6 +64,5 @@ public enum RomanDigit {
     public int getValue() {
         return value;
     }
-
 
 }

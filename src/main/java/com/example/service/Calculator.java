@@ -7,6 +7,13 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.regex.Pattern;
 
+/**
+ * This class accepts a question in the form of Question object and produces String answer
+ *
+ * @author Asif Hussain
+ * @version 1.0
+ *
+ */
 public class Calculator {
     private Map<String, RomanDigit> intergalacticMap;
     private Map<String, Double> ornamentMap;

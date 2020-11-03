@@ -5,6 +5,13 @@ import com.sun.istack.internal.NotNull;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * This class represents a question that is an input to Calculator
+ *
+ * @author Asif Hussain
+ * @version 1.0
+ *
+ */
 public class Question {
     private List<String> intergalacticNumber;
     private String ornament;

@@ -12,6 +12,14 @@ import com.example.service.parser.QuestionParser;
 import java.math.BigDecimal;
 import java.util.Map;
 
+
+/**
+ * A controller class that calls a suitable question parser based on question type
+ *
+ * @author Asif Hussain
+ * @version 1.0
+ *
+ */
 public class QuestionController {
     public static String answerTo(Map<String, RomanDigit> intergalacticMap, Map<String, Double> ornamentValueMap, String questionStr) {
         QuestionParser parser = questionStr.contains(Parser.CREDITS) ? new OrnamentQuestionParser(intergalacticMap, ornamentValueMap) : new IntergalacticQuestionParser(intergalacticMap);

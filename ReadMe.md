@@ -32,6 +32,3 @@
 ######state:
             interGalacticNumber
             material
-
-                        
-       

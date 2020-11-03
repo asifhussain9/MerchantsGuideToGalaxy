@@ -8,6 +8,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * A controller class that calls a suitable controller based on input type
+ *
+ * @author Asif Hussain
+ * @version 1.0
+ *
+ */
 public class TranslatorController {
     private static Map<String, RomanDigit> intergalacticMap = new HashMap<>();
     private static Map<String, Double> ornamentValueMap = new HashMap<>();

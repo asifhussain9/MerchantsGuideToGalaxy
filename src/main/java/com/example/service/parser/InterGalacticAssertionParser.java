@@ -5,6 +5,13 @@ import com.example.model.RomanDigit;
 
 import java.util.Map;
 
+/**
+ * This class parses input with intergalactic to roman translation
+ *
+ * @author Asif Hussain
+ * @version 1.0
+ *
+ */
 public class InterGalacticAssertionParser extends AssertionParser {
     public InterGalacticAssertionParser(Map<String, RomanDigit> intergalacticMap) {
         super(intergalacticMap);
