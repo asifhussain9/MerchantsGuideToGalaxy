@@ -56,6 +56,9 @@ The TranslatorMain.java file has the main method to run the program. The inputs.
 
 
 Edge Cases:
-Assertions are placed before the questions
-Application to ensure valid Roman number
+
 Inputs to be provided via inputs.txt file
+
+Assertions in the inputs.txt should be placed before the questions
+
+Application to ensure valid Roman number
