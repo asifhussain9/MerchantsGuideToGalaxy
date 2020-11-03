@@ -17,7 +17,7 @@ public class CalculatorTest {
     private Map<String, Double> ornamentMap;
 
     @BeforeEach
-    public void initialise(){
+    public void initialise() {
         intergalacticNumber = new ArrayList();
         intergalacticMap = new HashMap<>();
         ornamentMap = new HashMap<>();
@@ -39,7 +39,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void shouldCalculateOrnamentValue(){
+    public void shouldCalculateOrnamentValue() {
         intergalacticNumber.addAll(Arrays.asList("glob", "prok"));
         ornamentMap.put("Silver", 17D);
         question = new Question(intergalacticNumber, "Silver");

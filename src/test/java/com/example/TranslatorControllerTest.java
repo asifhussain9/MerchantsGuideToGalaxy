@@ -51,7 +51,7 @@ public class TranslatorControllerTest {
                 questions.iterator(),
                 question -> question.replace(IntergalacticQuestionParser.HOW_MUCH_IS_, "").replace(OrnamentQuestionParser.HOW_MANY_CREDITS_IS_, "").replace(QuestionParser.QUESTION_MARK, ""),
                 question -> {
-                    String answer = QuestionController.parse(intergalacticMap, ornamentMap, question);
+                    String answer = QuestionController.answerTo(intergalacticMap, ornamentMap, question);
                     int questionIndex = questions.indexOf(question);
                     DynamicTest.dynamicTest(question, () -> Assertions.assertEquals(answers[questionIndex], answer));
                 }

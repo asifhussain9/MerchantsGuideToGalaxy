@@ -43,7 +43,7 @@ public enum RomanDigit {
         return Arrays.stream(invalidDigitRepititions).noneMatch(romanNumber::contains);
     }
 
-    public static boolean isValidCombinations(String romanNumber){
+    public static boolean isValidCombinations(String romanNumber) {
         return Arrays.stream(invalidDigitCombinations).noneMatch(romanNumber::contains);
     }
 

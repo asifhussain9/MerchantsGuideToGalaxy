@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 public class QuestionController {
-    public static String parse(Map<String, RomanDigit> intergalacticMap, Map<String, Double> ornamentValueMap, String questionStr) {
+    public static String answerTo(Map<String, RomanDigit> intergalacticMap, Map<String, Double> ornamentValueMap, String questionStr) {
         QuestionParser parser = questionStr.contains(Parser.CREDITS) ? new OrnamentQuestionParser(intergalacticMap, ornamentValueMap) : new IntergalacticQuestionParser(intergalacticMap);
         String answer = "";
 

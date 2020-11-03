@@ -9,7 +9,12 @@ import java.util.stream.Stream;
 
 public class TranslatorMain {
     public static void main(String[] args) {
-        try (Stream<String> lines = Files.lines(Paths.get("inputs.txt"))){
+        if (!Files.exists(Paths.get("inputs.txt"))) {
+            System.out.println("Please provide a valid input file");
+            return;
+        }
+
+        try (Stream<String> lines = Files.lines(Paths.get("inputs.txt"))) {
             lines
                     .filter(line -> !line.isEmpty())
                     .forEach(TranslatorController::parse);

@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.model.RomanDigit;
-import com.example.service.parser.*;
+import com.example.service.parser.QuestionParser;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,18 +13,18 @@ public class TranslatorController {
     private static Map<String, Double> ornamentValueMap = new HashMap<>();
     private static List<String> answers = new ArrayList<>();
 
-    public static void parse(String input){
-        boolean isQuestion = input.contains(QuestionParser.QUESTION_MARK);
+    public static void parse(String input) {
+        boolean isQuestion = input.endsWith(QuestionParser.QUESTION_MARK);
 
-        if(isQuestion){
-            String answer = QuestionController.parse(intergalacticMap, ornamentValueMap, input);
+        if (isQuestion) {
+            String answer = QuestionController.answerTo(intergalacticMap, ornamentValueMap, input);
             answers.add(answer);
-        }else{
+        } else {
             AssertionController.parse(intergalacticMap, ornamentValueMap, input);
         }
     }
 
-    public static void printAnswers(){
+    public static void printAnswers() {
         answers.forEach(System.out::println);
     }
 }

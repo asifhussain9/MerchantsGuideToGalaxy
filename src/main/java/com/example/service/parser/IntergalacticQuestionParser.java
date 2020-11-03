@@ -22,7 +22,7 @@ public class IntergalacticQuestionParser extends QuestionParser {
 
         List<String> intergalacticNumber = Arrays.asList(questionStr.split(" "));
 
-        if(isValidRomanNumber(intergalacticNumber)){
+        if (isValidRomanNumber(intergalacticNumber)) {
             return new Question(intergalacticNumber, "");
         }
 
