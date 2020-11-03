@@ -55,7 +55,7 @@ Running the code:
 The TranslatorMain.java file has the main method to run the program. The inputs.txt is the file with a list of inputs for the program.
 
 
-Edge Cases:
+Note:
 
 Inputs to be provided via inputs.txt file
 
